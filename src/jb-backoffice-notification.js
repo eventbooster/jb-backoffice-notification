@@ -3,7 +3,7 @@ angular
 .directive('notification', [ 'NotificationService', function ( NotificationService ) {
 
 	return {
-		, scope				: {}
+		scope				: {}
 		, replace			: true
 		, templateUrl		: 'notificationTemplate.html'
 		, controller		: function ($scope) {
