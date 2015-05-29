@@ -30,10 +30,12 @@ angular
 		// Needs unique id for ng-repeat!
 		notification.id = new Date().getTime() + Math.floor( Math.random() * 100000 );
 
-		// Remove notification from this.notifications after 6 sec.
-		$timeout( function() {
-			this.notifications.splice( this.notifications.indexOf( notification ), 1 );
-		}.bind( this ), 6000 );
+		// Remove notification from this.notifications after 6 sec – but only for success messages.
+		if( notification.type === 'success' ) {
+			$timeout( function() {
+				this.notifications.splice( this.notifications.indexOf( notification ), 1 );
+			}.bind( this ), 6000 );
+		}
 
 		this.notifications.push( notification );
 

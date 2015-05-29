@@ -1,6 +1,6 @@
 {
 	"name"			: "eb-backoffice-notification"
-	, "version"		: "0.0.2"
+	, "version"		: "0.0.3"
 	, "main"		: "src/jb-backoffice-notification.js"
 	, "dependencies": {
 		"angular"				: ">=1.2.0"
